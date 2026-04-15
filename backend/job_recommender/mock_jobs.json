@@ -1,0 +1,572 @@
+[
+  {
+    "id": 1,
+    "title": "Machine Learning Engineer",
+    "company": "Google India",
+    "location": "Bangalore",
+    "salary": "25-45 LPA",
+    "experience": "0-2 years",
+    "remote": true,
+    "job_type": "Full Time",
+    "apply_date": "2026-05-14",
+    "description": "Build and deploy ML models at scale using TensorFlow and PyTorch.",
+    "required_skills": [
+      "python",
+      "machine learning",
+      "tensorflow",
+      "pytorch",
+      "sql"
+    ],
+    "good_to_have": [
+      "mlops",
+      "docker",
+      "kubernetes"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Google&location=Bangalore",
+      "company": "https://careers.google.com/jobs/results/?q=machine+learning+engineer",
+      "naukri": "https://www.naukri.com/machine-learning-engineer-jobs-in-bangalore"
+    }
+  },
+  {
+    "id": 2,
+    "title": "AI/ML Engineer",
+    "company": "Microsoft India",
+    "location": "Hyderabad",
+    "salary": "20-40 LPA",
+    "experience": "0-3 years",
+    "remote": true,
+    "job_type": "Full Time",
+    "apply_date": "2026-05-19",
+    "description": "Work on Azure AI services and build intelligent applications.",
+    "required_skills": [
+      "python",
+      "machine learning",
+      "azure",
+      "deep learning"
+    ],
+    "good_to_have": [
+      "langchain",
+      "rag",
+      "llm"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=AI+ML+Engineer+Microsoft&location=Hyderabad",
+      "company": "https://careers.microsoft.com/us/en/search-results?keywords=machine%20learning",
+      "naukri": "https://www.naukri.com/ai-ml-engineer-jobs-in-hyderabad"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Software Development Engineer",
+    "company": "Amazon India",
+    "location": "Bangalore",
+    "salary": "18-35 LPA",
+    "experience": "0-2 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-05-24",
+    "description": "Design and build distributed systems at Amazon scale.",
+    "required_skills": [
+      "python",
+      "java",
+      "data structures",
+      "algorithms",
+      "sql"
+    ],
+    "good_to_have": [
+      "aws",
+      "docker",
+      "system design"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=SDE+Amazon&location=Bangalore",
+      "company": "https://www.amazon.jobs/en/search?base_query=software+engineer&loc_query=India",
+      "naukri": "https://www.naukri.com/software-development-engineer-jobs-in-bangalore"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Data Scientist",
+    "company": "Flipkart",
+    "location": "Bangalore",
+    "salary": "15-30 LPA",
+    "experience": "0-2 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-05-29",
+    "description": "Analyze large datasets to drive business insights and build recommendation systems.",
+    "required_skills": [
+      "python",
+      "statistics",
+      "machine learning",
+      "sql",
+      "pandas"
+    ],
+    "good_to_have": [
+      "spark",
+      "hadoop",
+      "tableau"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Flipkart",
+      "company": "https://www.flipkartcareers.com/",
+      "naukri": "https://www.naukri.com/data-scientist-jobs-in-bangalore"
+    }
+  },
+  {
+    "id": 5,
+    "title": "AI Research Engineer",
+    "company": "DRDO",
+    "location": "Delhi",
+    "salary": "8-15 LPA",
+    "experience": "0-3 years",
+    "remote": false,
+    "job_type": "Government",
+    "apply_date": "2026-06-03",
+    "description": "Research and develop AI systems for defence applications including computer vision and signal processing.",
+    "required_skills": [
+      "python",
+      "machine learning",
+      "computer vision",
+      "deep learning"
+    ],
+    "good_to_have": [
+      "embedded systems",
+      "signal processing",
+      "c++"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Defence+India",
+      "company": "https://www.drdo.gov.in/careers",
+      "naukri": "https://www.naukri.com/defence-ai-jobs"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Defence AI Scientist",
+    "company": "iDEX Startup",
+    "location": "Delhi/Remote",
+    "salary": "10-20 LPA",
+    "experience": "0-2 years",
+    "remote": true,
+    "job_type": "Startup",
+    "apply_date": "2026-06-08",
+    "description": "Build AI solutions for Indian Armed Forces under the iDEX program.",
+    "required_skills": [
+      "python",
+      "machine learning",
+      "computer vision",
+      "deep learning"
+    ],
+    "good_to_have": [
+      "edge ai",
+      "tensorflow lite",
+      "opencv"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Defence+AI+India",
+      "company": "https://idex.gov.in/",
+      "naukri": "https://www.naukri.com/defence-technology-jobs"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Full Stack Developer",
+    "company": "Swiggy",
+    "location": "Bangalore",
+    "salary": "12-25 LPA",
+    "experience": "0-2 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-06-13",
+    "description": "Build scalable web applications using React and Node.js.",
+    "required_skills": [
+      "react",
+      "javascript",
+      "nodejs",
+      "python",
+      "mongodb"
+    ],
+    "good_to_have": [
+      "docker",
+      "aws",
+      "redis"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Full+Stack+Developer+Swiggy",
+      "company": "https://careers.swiggy.com/",
+      "naukri": "https://www.naukri.com/full-stack-developer-jobs-in-bangalore"
+    }
+  },
+  {
+    "id": 8,
+    "title": "GenAI Engineer",
+    "company": "Infosys",
+    "location": "Pune/Bangalore",
+    "salary": "8-18 LPA",
+    "experience": "0-2 years",
+    "remote": true,
+    "job_type": "Full Time",
+    "apply_date": "2026-06-18",
+    "description": "Build GenAI applications using LangChain, RAG and LLMs.",
+    "required_skills": [
+      "python",
+      "langchain",
+      "machine learning",
+      "git"
+    ],
+    "good_to_have": [
+      "rag",
+      "faiss",
+      "chromadb",
+      "groq"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=GenAI+Engineer+Infosys",
+      "company": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-198862",
+      "naukri": "https://www.naukri.com/generative-ai-engineer-jobs"
+    }
+  },
+  {
+    "id": 9,
+    "title": "AI/ML Intern",
+    "company": "GenAI Startup",
+    "location": "Remote",
+    "salary": "20-40k/month",
+    "experience": "Fresher",
+    "remote": true,
+    "job_type": "Internship",
+    "apply_date": "2026-06-23",
+    "description": "Work on cutting-edge AI projects in a fast-paced startup environment.",
+    "required_skills": [
+      "python",
+      "machine learning",
+      "git"
+    ],
+    "good_to_have": [
+      "langchain",
+      "fastapi",
+      "react"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=AI+ML+Intern&location=India",
+      "company": "https://internshala.com/internships/machine-learning-internship",
+      "naukri": "https://www.naukri.com/ai-ml-internship-jobs"
+    }
+  },
+  {
+    "id": 10,
+    "title": "Backend Developer",
+    "company": "Razorpay",
+    "location": "Bangalore",
+    "salary": "15-28 LPA",
+    "experience": "0-2 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-06-28",
+    "description": "Build high-performance APIs and payment processing systems.",
+    "required_skills": [
+      "python",
+      "fastapi",
+      "sql",
+      "mongodb",
+      "git"
+    ],
+    "good_to_have": [
+      "redis",
+      "docker",
+      "aws"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Backend+Developer+Razorpay",
+      "company": "https://razorpay.com/jobs/",
+      "naukri": "https://www.naukri.com/backend-developer-jobs-in-bangalore"
+    }
+  },
+  {
+    "id": 11,
+    "title": "Computer Vision Engineer",
+    "company": "Ola Electric",
+    "location": "Bangalore",
+    "salary": "12-22 LPA",
+    "experience": "0-2 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-07-03",
+    "description": "Develop computer vision systems for autonomous vehicles.",
+    "required_skills": [
+      "python",
+      "computer vision",
+      "deep learning",
+      "opencv"
+    ],
+    "good_to_have": [
+      "pytorch",
+      "tensorrt",
+      "cuda"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Computer+Vision+Engineer+India",
+      "company": "https://olaelectric.com/careers",
+      "naukri": "https://www.naukri.com/computer-vision-engineer-jobs"
+    }
+  },
+  {
+    "id": 12,
+    "title": "NLP Engineer",
+    "company": "Sarvam AI",
+    "location": "Bangalore/Remote",
+    "salary": "15-30 LPA",
+    "experience": "0-3 years",
+    "remote": true,
+    "job_type": "Full Time",
+    "apply_date": "2026-07-08",
+    "description": "Build NLP models for Indian languages including Hindi, Tamil, Bengali.",
+    "required_skills": [
+      "python",
+      "nlp",
+      "machine learning",
+      "deep learning"
+    ],
+    "good_to_have": [
+      "transformers",
+      "huggingface",
+      "langchain"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=NLP+Engineer+India",
+      "company": "https://www.sarvam.ai/careers",
+      "naukri": "https://www.naukri.com/nlp-engineer-jobs"
+    }
+  },
+  {
+    "id": 13,
+    "title": "DevOps Engineer",
+    "company": "Zomato",
+    "location": "Gurgaon",
+    "salary": "12-22 LPA",
+    "experience": "0-2 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-07-13",
+    "description": "Manage cloud infrastructure and CI/CD pipelines.",
+    "required_skills": [
+      "docker",
+      "kubernetes",
+      "aws",
+      "python",
+      "git"
+    ],
+    "good_to_have": [
+      "terraform",
+      "jenkins",
+      "monitoring"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=DevOps+Engineer+Zomato",
+      "company": "https://www.zomato.com/careers",
+      "naukri": "https://www.naukri.com/devops-engineer-jobs-in-gurgaon"
+    }
+  },
+  {
+    "id": 14,
+    "title": "Frontend Developer",
+    "company": "Meesho",
+    "location": "Bangalore",
+    "salary": "10-20 LPA",
+    "experience": "0-2 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-07-18",
+    "description": "Build beautiful and performant React applications.",
+    "required_skills": [
+      "react",
+      "javascript",
+      "html",
+      "css",
+      "git"
+    ],
+    "good_to_have": [
+      "typescript",
+      "redux",
+      "performance optimization"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Frontend+Developer+Meesho",
+      "company": "https://meesho.io/jobs",
+      "naukri": "https://www.naukri.com/frontend-developer-jobs-in-bangalore"
+    }
+  },
+  {
+    "id": 15,
+    "title": "MLOps Engineer",
+    "company": "PhonePe",
+    "location": "Bangalore",
+    "salary": "15-28 LPA",
+    "experience": "0-3 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-07-23",
+    "description": "Deploy and monitor ML models in production.",
+    "required_skills": [
+      "python",
+      "machine learning",
+      "docker",
+      "kubernetes",
+      "aws"
+    ],
+    "good_to_have": [
+      "mlflow",
+      "airflow",
+      "monitoring"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=MLOps+Engineer+India",
+      "company": "https://careers.phonepe.com/",
+      "naukri": "https://www.naukri.com/mlops-engineer-jobs"
+    }
+  },
+  {
+    "id": 16,
+    "title": "AI Product Engineer",
+    "company": "CRED",
+    "location": "Bangalore",
+    "salary": "18-35 LPA",
+    "experience": "0-2 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-07-28",
+    "description": "Build AI-powered financial products.",
+    "required_skills": [
+      "python",
+      "machine learning",
+      "fastapi",
+      "mongodb"
+    ],
+    "good_to_have": [
+      "langchain",
+      "rag",
+      "vector databases"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+CRED",
+      "company": "https://careers.cred.club/",
+      "naukri": "https://www.naukri.com/ai-product-engineer-jobs"
+    }
+  },
+  {
+    "id": 17,
+    "title": "Data Engineer",
+    "company": "Paytm",
+    "location": "Noida",
+    "salary": "10-20 LPA",
+    "experience": "0-2 years",
+    "remote": false,
+    "job_type": "Full Time",
+    "apply_date": "2026-08-02",
+    "description": "Build data pipelines and ETL processes.",
+    "required_skills": [
+      "python",
+      "sql",
+      "spark",
+      "hadoop",
+      "mongodb"
+    ],
+    "good_to_have": [
+      "airflow",
+      "kafka",
+      "aws"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineer+Paytm",
+      "company": "https://paytm.com/careers",
+      "naukri": "https://www.naukri.com/data-engineer-jobs-in-noida"
+    }
+  },
+  {
+    "id": 18,
+    "title": "AI/ML Researcher",
+    "company": "IIT Delhi AI Lab",
+    "location": "Delhi",
+    "salary": "6-12 LPA",
+    "experience": "Fresher",
+    "remote": false,
+    "job_type": "Research",
+    "apply_date": "2026-08-07",
+    "description": "Conduct research in machine learning and AI.",
+    "required_skills": [
+      "python",
+      "machine learning",
+      "deep learning",
+      "mathematics"
+    ],
+    "good_to_have": [
+      "pytorch",
+      "research papers",
+      "statistics"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=AI+Researcher+IIT",
+      "company": "https://www.iitd.ac.in/careers",
+      "naukri": "https://www.naukri.com/ai-researcher-jobs"
+    }
+  },
+  {
+    "id": 19,
+    "title": "Software Engineer - AI",
+    "company": "Adobe India",
+    "location": "Noida/Bangalore",
+    "salary": "15-30 LPA",
+    "experience": "0-2 years",
+    "remote": true,
+    "job_type": "Full Time",
+    "apply_date": "2026-08-12",
+    "description": "Build AI features for Adobe creative products.",
+    "required_skills": [
+      "python",
+      "machine learning",
+      "javascript",
+      "git"
+    ],
+    "good_to_have": [
+      "computer vision",
+      "generative ai",
+      "react"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineer+AI+Adobe",
+      "company": "https://careers.adobe.com/us/en",
+      "naukri": "https://www.naukri.com/software-engineer-ai-jobs"
+    }
+  },
+  {
+    "id": 20,
+    "title": "Prompt Engineer",
+    "company": "Various Startups",
+    "location": "Remote",
+    "salary": "8-18 LPA",
+    "experience": "Fresher",
+    "remote": true,
+    "job_type": "Full Time",
+    "apply_date": "2026-08-17",
+    "description": "Design and optimize prompts for LLM applications.",
+    "required_skills": [
+      "python",
+      "langchain",
+      "git",
+      "machine learning"
+    ],
+    "good_to_have": [
+      "rag",
+      "llm",
+      "prompt engineering",
+      "groq"
+    ],
+    "apply_links": {
+      "linkedin": "https://www.linkedin.com/jobs/search/?keywords=Prompt+Engineer+India",
+      "company": "https://wellfound.com/jobs?q=prompt+engineer",
+      "naukri": "https://www.naukri.com/prompt-engineer-jobs"
+    }
+  }
+]

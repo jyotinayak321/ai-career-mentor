@@ -1,0 +1,29 @@
+Jyoti Nayak
+Email: jyoti@gmail.com
+Phone: 9876543210
+
+EDUCATION
+B.Tech Computer Science Engineering
+CBS Group of Institutes, MDU
+2023-2027, CGPA: 7.9
+
+SKILLS
+Python, JavaScript, React, FastAPI
+MongoDB, SQL, Git, Docker
+Machine Learning, LangChain, RAG
+NumPy, Pandas, HTML, CSS
+
+EXPERIENCE
+AI Intern - XYZ Company 2024
+Developed RAG system using LangChain
+Built PDF-based AI chatbot
+
+PROJECTS
+Carbon Tracker Web App
+React, JavaScript, CSS
+
+PDF Based RAG AI System
+Python, LangChain, ChromaDB
+
+Bank Management System
+Java, MySQL, JDBC

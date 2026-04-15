@@ -1,0 +1,37 @@
+
+services:
+  - type: web   # This tells the platform that we are creating a web service (a backend API server)
+
+    name: ai-career-mentor-backend   # The name of the service on the deployment platform
+
+    env: python   # Specifies that the runtime environment is Python
+
+    buildCommand: pip install -r requirements.txt && python -m spacy download en_core_web_sm
+    # Command executed during the build process
+    # 1. Installs all required Python libraries from requirements.txt
+    # 2. Downloads the spaCy English NLP model used for text processing (e.g., resume analysis)
+
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    # Command used to start the backend server
+    # uvicorn runs the FastAPI application
+    # main:app refers to the app object inside the file main.py
+    # --host 0.0.0.0 allows the server to accept external connections
+    # --port $PORT uses the port automatically provided by the hosting platform
+
+    envVars:
+      - key: MONGODB_URL
+        sync: false
+        # The connection string used to connect the backend to the MongoDB database
+        # sync: false means the value must be added manually in the deployment dashboard
+
+      - key: SECRET_KEY
+        sync: false
+        # A secret key used for security purposes such as authentication or JWT token generation
+
+      - key: GROQ_API_KEY
+        sync: false
+        # API key used to access AI models from Groq for generating responses or analysis
+
+      - key: RAPIDAPI_KEY
+        sync: false
+        # API key used to access external APIs (for example job search APIs) through RapidAPI
