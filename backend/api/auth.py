@@ -69,7 +69,7 @@ class UserRegister(BaseModel):
     password: str       # "mypassword123"
 
 # Login ke liye data model
-class UserLogin(BaseModel):~
+class UserLogin(BaseModel):
     email:str     # "jyoti@gmail.com"
     password: str       # "mypassword123"
 
