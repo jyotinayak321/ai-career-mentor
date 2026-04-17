@@ -32,7 +32,7 @@ const API = axios.create({
   // Backend ka address
   // Ye URL sab requests mein automatically lagega!
   // localhost:8000 = Hamara FastAPI server
-  baseURL: 'http://localhost:8000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000/api',
 
   // 30 second timeout
   // Agar 30 sec mein response nahi aaya
