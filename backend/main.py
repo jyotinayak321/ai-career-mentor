@@ -27,6 +27,9 @@ app = FastAPI(
 # CORS MIDDLEWARE
 # ------------------------------------------------
 # Frontend se API calls allow karo
+# - Localhost (development ke liye)
+# - Main Vercel production URL
+# - Saare Vercel preview deployments (regex se)
 # ------------------------------------------------
 
 app.add_middleware(
@@ -35,9 +38,8 @@ app.add_middleware(
         "http://localhost:5173",
         "http://localhost:3000",
         "https://ai-career-mentor-sage.vercel.app",
-        "https://*.vercel.app",
-        "*"
     ],
+    allow_origin_regex=r"https://ai-career-mentor.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
