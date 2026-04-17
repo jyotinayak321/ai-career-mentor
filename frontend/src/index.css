@@ -1,111 +1,309 @@
+/* ==========================================
+   Global Styles — AI Career Mentor
+   All Devices Responsive
+   ========================================== */
+
+/* CSS Variables */
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --text-dark: #1a1a1a;
+  --text-gray: #6b7280;
+  --bg-light: #f9fafb;
+  --white: #ffffff;
+  --border: #e5e7eb;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
-
-body {
+/* Reset */
+* {
   margin: 0;
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
   box-sizing: border-box;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+/* No horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes micPulse {
+  0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(99, 102, 241, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+}
+
+@keyframes wave {
+  0%, 100% { height: 8px; }
+  50% { height: 24px; }
+}
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+   
+   Mobile Small:  < 375px  (iPhone SE)
+   Mobile:        375-480px (Most phones)
+   Mobile Large:  480-768px (Large phones)
+   Tablet:        768-1024px (iPad)
+   Desktop:       > 1024px (Laptop/PC)
+   ========================================== */
+
+/* ==========================================
+   MOBILE SMALL — iPhone SE, Galaxy A series
+   Max width: 375px
+   ========================================== */
+@media (max-width: 375px) {
+
+  /* Font sizes smaller */
+  h1 { font-size: 20px !important; }
+  h2 { font-size: 18px !important; }
+  h3 { font-size: 16px !important; }
+  p  { font-size: 13px !important; }
+
+  /* Padding kam karo */
+  div[style*="padding: 2rem"] {
+    padding: 0.75rem !important;
+  }
+
+  div[style*="padding: 1.5rem"] {
+    padding: 0.75rem !important;
+  }
+
+  /* Grid 1 column */
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Button full width */
+  button[style*="padding: 14px"] {
+    width: 100% !important;
+  }
+
+  /* Cards border radius kam */
+  div[style*="border-radius: 16px"] {
+    border-radius: 10px !important;
   }
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+/* ==========================================
+   MOBILE — Most smartphones
+   Max width: 480px
+   ========================================== */
+@media (max-width: 480px) {
+
+  /* Input zoom prevent — iOS */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Content max width */
+  div[style*="max-width: 1100px"],
+  div[style*="max-width: 900px"],
+  div[style*="max-width: 800px"] {
+    max-width: 100% !important;
+    padding: 1rem !important;
+  }
+
+  /* Grid 1 column */
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Flex column on mobile */
+  div[style*="display: flex"][style*="gap"] {
+    flex-wrap: wrap;
+  }
+
+  /* Stats cards full width */
+  div[style*="minmax(200px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Hero text */
+  h1[style*="font-size: 28px"] {
+    font-size: 22px !important;
+  }
+
+  /* Score card */
+  div[style*="font-size: 72px"] {
+    font-size: 48px !important;
+  }
+
+  /* Action cards 2 column */
+  div[style*="minmax(220px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Buttons smaller */
+  a[style*="padding: 10px 18px"] {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+
+  /* Job cards */
+  div[style*="padding: 1.5rem"] {
+    padding: 1rem !important;
+  }
+
+  /* Tags wrap */
+  div[style*="display: flex"][style*="gap: 8px"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Interview buttons */
+  div[style*="gap: 12px"] {
+    flex-direction: column !important;
   }
 }
-p {
-  margin: 0;
+
+/* ==========================================
+   MOBILE LARGE — Large phones
+   481px - 768px
+   ========================================== */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  /* 2 column grid */
+  div[style*="minmax(200px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Content padding */
+  div[style*="max-width: 1100px"],
+  div[style*="max-width: 900px"] {
+    padding: 1.25rem !important;
+  }
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+/* ==========================================
+   TABLET — iPad, Samsung Tab
+   769px - 1024px
+   ========================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* 2-3 column grid */
+  div[style*="minmax(220px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Content padding */
+  div[style*="max-width: 1100px"] {
+    padding: 1.5rem !important;
+  }
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+/* ==========================================
+   TOUCH DEVICES — Better tap targets
+   ========================================== */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Bigger touch targets */
+  button {
+    min-height: 44px;
+  }
+
+  /* Remove hover effects */
+  button:hover {
+    transform: none !important;
+  }
+
+  /* Links bigger */
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* ==========================================
+   PWA — App-like feel
+   ========================================== */
+@media (display-mode: standalone) {
+
+  /* Safe area for notch phones */
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* Fade in animation */
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
 }

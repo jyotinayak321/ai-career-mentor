@@ -37,7 +37,7 @@ const API = axios.create({
   // 30 second timeout
   // Agar 30 sec mein response nahi aaya
   // Request cancel ho jayegi!
-  timeout: 30000,
+  timeout: 90000,
 
   // Default headers
   headers: {
