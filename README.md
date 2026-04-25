@@ -151,6 +151,8 @@ JWT Authentication — Secure token-based auth with auto-refresh
 
 📸 Screenshots
 Login Page
+<img width="1920" height="1080" alt="Screenshot 2026-04-25 201643" src="https://github.com/user-attachments/assets/18620908-242d-427b-9da4-e95cbed56853" />
+
 
 Beautiful gradient login page with form validation
 
