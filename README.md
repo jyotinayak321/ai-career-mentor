@@ -159,22 +159,42 @@ Beautiful gradient login page with form validation
 Dashboard
 
 Career overview with skill gap analysis, match percentage, and quick actions
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/39a8d29d-82b9-47c5-8f07-73db07d3100e" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/844978a0-3d9e-47b7-ae73-514102013e7f" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/231a11fa-31e6-410e-8453-ea5eeb9068f1" />
+
+
 
 Resume Analyzer
 
 Drag & drop resume upload with instant AI score, skills detection, and feedback
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f21acd5c-7543-47ca-803f-9bad3bdd8999" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/23fd0228-478b-4671-8261-27a4dfad974f" />
+
+
 Job Recommendations
 
 20+ jobs with match score, apply deadline, LinkedIn/Naukri/Company apply buttons
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d78a0d5f-9ccf-452a-923c-6625bcf24099" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/55e58d53-1624-4018-a537-7ea3304af797" />
+
+
 
 Career Roadmap
 
 AI-generated 12-week personalized learning plan with daily tasks
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/08cb789a-f2c7-46d8-a98b-3c8435b8f8ba" />
+
+
 Mock Interview
 
 AI interviewer with real-time feedback, score, strengths & improvements
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8030dc7b-a373-4b04-b1ce-e4d38f300945" />
 
 
 🤝 Contributing
