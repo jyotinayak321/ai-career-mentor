@@ -1,12 +1,10 @@
 // ================================================
-// ResumeUpload.jsx — Resume Upload Page
+// ResumeUpload.jsx — Resume Upload Page (UPDATED)
 // ================================================
-// WHAT DOES THIS PAGE DO?
-// 1. Accepts file upload (PDF/DOCX/TXT)
-// 2. Validates file type and size
-// 3. Sends to backend API
-// 4. Displays analysis results
-// 5. Shows score, skills, feedback
+// NEW SECTIONS ADDED:
+// 1. ❌ Fail Points — kya galat hai resume mein
+// 2. ✅ Correct Way — sahi tarika kya hona chahiye
+// 3. 📈 Improve Section — kaise improve karein
 // ================================================
 
 import { useState } from 'react'
@@ -31,7 +29,6 @@ function ResumeUpload() {
   const validateFile = (selectedFile) => {
     if (!selectedFile) return false
 
-    // Check file type
     const allowedTypes = [
       'application/pdf',
       'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
@@ -48,8 +45,7 @@ function ResumeUpload() {
       return false
     }
 
-    // Check file size (max 5MB)
-    const maxSize = 5 * 1024 * 1024 // 5MB in bytes
+    const maxSize = 5 * 1024 * 1024
     if (selectedFile.size > maxSize) {
       setError('File size must be less than 5MB!')
       return false
@@ -67,18 +63,16 @@ function ResumeUpload() {
     const selectedFile = e.target.files[0]
     if (validateFile(selectedFile)) {
       setFile(selectedFile)
-      setResult(null) // Clear previous results
+      setResult(null)
     }
   }
 
   // ------------------------------------------------
   // DRAG AND DROP HANDLERS
   // ------------------------------------------------
-  // Drag and drop = Modern UX feature
-  // User can drag file from explorer to browser!
 
   const handleDragOver = (e) => {
-    e.preventDefault() // Required for drop to work
+    e.preventDefault()
     setDragOver(true)
   }
 
@@ -110,13 +104,9 @@ function ResumeUpload() {
     setError('')
 
     try {
-      // FormData = Special object for file uploads
       const formData = new FormData()
-      // 'file' = Backend expects this field name
       formData.append('file', file)
 
-      // Send to backend
-      // multipart/form-data header is needed for files
       const response = await API.post(
         '/resume/upload',
         formData,
@@ -127,7 +117,6 @@ function ResumeUpload() {
         }
       )
 
-      // Save results to state
       setResult(response.data)
 
     } catch (err) {
@@ -143,13 +132,12 @@ function ResumeUpload() {
   // ------------------------------------------------
   // GET SCORE COLOR
   // ------------------------------------------------
-  // Different colors based on score
 
   const getScoreColor = (score) => {
-    if (score >= 85) return '#10b981' // Green
-    if (score >= 70) return '#6366f1' // Purple
-    if (score >= 55) return '#f59e0b' // Yellow
-    return '#ef4444'                   // Red
+    if (score >= 85) return '#10b981'
+    if (score >= 70) return '#6366f1'
+    if (score >= 55) return '#f59e0b'
+    return '#ef4444'
   }
 
   // ------------------------------------------------
@@ -182,30 +170,23 @@ function ResumeUpload() {
           onDrop={handleDrop}
           onClick={() => document.getElementById('fileInput').click()}
         >
-          {/* Upload Icon */}
           <div style={styles.uploadIcon}>
             {file ? '✅' : '📂'}
           </div>
 
-          {/* Upload Text */}
           <p style={styles.uploadText}>
-            {file
-              ? file.name
-              : 'Drop PDF, DOCX or TXT here'
-            }
+            {file ? file.name : 'Drop PDF, DOCX or TXT here'}
           </p>
           <p style={styles.uploadSubtext}>
             Or click to select file (max 5MB)
           </p>
 
-          {/* File Size if selected */}
           {file && (
             <p style={styles.fileSize}>
               Size: {(file.size / 1024).toFixed(1)} KB
             </p>
           )}
 
-          {/* Hidden file input */}
           <input
             type="file"
             id="fileInput"
@@ -233,15 +214,11 @@ function ResumeUpload() {
             opacity: loading ? 0.8 : 1
           }}
         >
-          {loading
-            ? '⏳ Analyzing your resume...'
-            : '🚀 Analyze Resume'
-          }
+          {loading ? '⏳ Analyzing your resume...' : '🚀 Analyze Resume'}
         </button>
 
         {/* ---------------------------------------- */}
-        {/* RESULTS SECTION */}
-        {/* Shows after successful upload */}
+        {/* RESULTS SECTION                          */}
         {/* ---------------------------------------- */}
 
         {result && (
@@ -290,6 +267,66 @@ function ResumeUpload() {
                 )}
             </div>
 
+            {/* ❌ FAIL POINTS SECTION */}
+            <div style={styles.card}>
+              <h3 style={styles.cardTitle}>❌ Fail Points</h3>
+              <p style={styles.sectionSubtitle}>
+                Ye cheezein tumhare resume mein galat hain ya missing hain
+              </p>
+              {result.score_report?.fail_points?.length > 0 ? (
+                result.score_report.fail_points.map((point, i) => (
+                  <div key={i} style={styles.failItem}>
+                    <span style={styles.failBadge}>✗</span>
+                    <span style={styles.failText}>{point}</span>
+                  </div>
+                ))
+              ) : (
+                <p style={{ color: '#10b981', fontWeight: '600', fontSize: '14px' }}>
+                  🎉 No major fail points found! Great resume!
+                </p>
+              )}
+            </div>
+
+            {/* ✅ CORRECT WAY SECTION */}
+            <div style={styles.card}>
+              <h3 style={styles.cardTitle}>✅ Correct Way</h3>
+              <p style={styles.sectionSubtitle}>
+                Har fail point ka sahi tarika — aise hona chahiye tha
+              </p>
+              {result.score_report?.correct_ways?.length > 0 ? (
+                result.score_report.correct_ways.map((way, i) => (
+                  <div key={i} style={styles.correctItem}>
+                    <span style={styles.correctBadge}>✓</span>
+                    <span style={styles.correctText}>{way}</span>
+                  </div>
+                ))
+              ) : (
+                <p style={{ color: '#6b7280', fontSize: '14px' }}>
+                  No corrections needed at this time.
+                </p>
+              )}
+            </div>
+
+            {/* 📈 IMPROVE SECTION */}
+            <div style={styles.card}>
+              <h3 style={styles.cardTitle}>📈 How to Improve</h3>
+              <p style={styles.sectionSubtitle}>
+                Step-by-step tips to make your resume stronger
+              </p>
+              {result.score_report?.improvements?.length > 0 ? (
+                result.score_report.improvements.map((tip, i) => (
+                  <div key={i} style={styles.improveItem}>
+                    <span style={styles.improveNumber}>{i + 1}</span>
+                    <span style={styles.improveText}>{tip}</span>
+                  </div>
+                ))
+              ) : (
+                <p style={{ color: '#6b7280', fontSize: '14px' }}>
+                  🎉 No improvements needed!
+                </p>
+              )}
+            </div>
+
             {/* Skills Found */}
             <div style={styles.card}>
               <h3 style={styles.cardTitle}>
@@ -323,7 +360,7 @@ function ResumeUpload() {
               </div>
             </div>
 
-            {/* AI Feedback */}
+            {/* 💡 AI Feedback */}
             <div style={styles.card}>
               <h3 style={styles.cardTitle}>💡 AI Feedback</h3>
               {result.score_report?.feedback?.length > 0 ? (
@@ -459,9 +496,110 @@ const styles = {
   cardTitle: {
     fontSize: '18px',
     fontWeight: '700',
-    marginBottom: '16px',
+    marginBottom: '6px',
     color: '#1a1a1a'
   },
+  sectionSubtitle: {
+    fontSize: '13px',
+    color: '#9ca3af',
+    marginBottom: '16px',
+    fontStyle: 'italic'
+  },
+
+  // ❌ Fail Points styles
+  failItem: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '12px',
+    padding: '12px 14px',
+    background: '#fef2f2',
+    border: '1px solid #fca5a5',
+    borderRadius: '10px',
+    marginBottom: '10px',
+  },
+  failBadge: {
+    background: '#ef4444',
+    color: 'white',
+    borderRadius: '50%',
+    width: '22px',
+    height: '22px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '13px',
+    fontWeight: '700',
+    flexShrink: 0,
+    marginTop: '1px'
+  },
+  failText: {
+    fontSize: '14px',
+    color: '#dc2626',
+    lineHeight: '1.6'
+  },
+
+  // ✅ Correct Way styles
+  correctItem: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '12px',
+    padding: '12px 14px',
+    background: '#f0fdf4',
+    border: '1px solid #86efac',
+    borderRadius: '10px',
+    marginBottom: '10px',
+  },
+  correctBadge: {
+    background: '#10b981',
+    color: 'white',
+    borderRadius: '50%',
+    width: '22px',
+    height: '22px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '13px',
+    fontWeight: '700',
+    flexShrink: 0,
+    marginTop: '1px'
+  },
+  correctText: {
+    fontSize: '14px',
+    color: '#16a34a',
+    lineHeight: '1.6'
+  },
+
+  // 📈 Improve Section styles
+  improveItem: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    gap: '12px',
+    padding: '12px 14px',
+    background: '#eff6ff',
+    border: '1px solid #93c5fd',
+    borderRadius: '10px',
+    marginBottom: '10px',
+  },
+  improveNumber: {
+    background: '#6366f1',
+    color: 'white',
+    borderRadius: '50%',
+    minWidth: '26px',
+    height: '26px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '13px',
+    fontWeight: '700',
+    flexShrink: 0,
+    marginTop: '1px'
+  },
+  improveText: {
+    fontSize: '14px',
+    color: '#1d4ed8',
+    lineHeight: '1.6'
+  },
+
+  // Skills
   breakdownRow: {
     display: 'flex',
     alignItems: 'center',
