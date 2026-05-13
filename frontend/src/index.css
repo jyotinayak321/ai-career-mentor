@@ -13,7 +13,7 @@
   --text-dark: #1a1a1a;
   --text-gray: #6b7280;
   --bg-light: #f9fafb;
-  --white: #ffffff;
+  --white: #fdfdfd;
   --border: #e5e7eb;
   --radius: 12px;
   --shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -42,7 +42,7 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-track { background: #f5f3f3; }
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 3px;

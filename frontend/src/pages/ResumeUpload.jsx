@@ -672,3 +672,4 @@ const styles = {
 }
 
 export default ResumeUpload
+

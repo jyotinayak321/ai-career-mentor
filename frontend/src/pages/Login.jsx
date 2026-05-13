@@ -222,6 +222,8 @@ function Login() {
 // camelCase use karo: backgroundColor, fontSize
 // Strings mein values: '16px', 'white', '#6366f1'
 // ------------------------------------------------
+// Login.jsx ke andar sirf STYLES OBJECT replace karo
+// Baaki sab code same rahega!
 
 const styles = {
   container: {
@@ -229,16 +231,21 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'linear-gradient(135deg, #667eea, #764ba2)',
-    padding: '1rem'
+    // 🎨 YAHAN CHANGE: Dark gradient background
+    background: 'linear-gradient(135deg, #0f0c29, #302b63, #24243e)',
+    padding: '1rem',
+    fontFamily: "'Plus Jakarta Sans', sans-serif",
   },
   card: {
-    background: 'white',
-    borderRadius: '16px',
+    // 🎨 YAHAN CHANGE: Glass effect
+    background: 'rgba(255, 255, 255, 0.05)',
+    backdropFilter: 'blur(20px)',
+    border: '1px solid rgba(255, 255, 255, 0.12)',
+    borderRadius: '24px',
     padding: '2.5rem',
     width: '100%',
-    maxWidth: '420px',
-    boxShadow: '0 20px 60px rgba(0,0,0,0.2)'
+    maxWidth: '400px',
+    boxShadow: '0 25px 50px rgba(0,0,0,0.5)',
   },
   logo: {
     fontSize: '48px',
@@ -249,21 +256,23 @@ const styles = {
     fontSize: '26px',
     fontWeight: '700',
     textAlign: 'center',
-    color: '#1a1a1a',
+    // 🎨 YAHAN CHANGE: White text
+    color: '#ffffff',
     marginBottom: '6px'
   },
   subtitle: {
-    color: '#6b7280',
+    // 🎨 YAHAN CHANGE: Semi-transparent white
+    color: 'rgba(255,255,255,0.5)',
     textAlign: 'center',
     fontSize: '14px',
     marginBottom: '1.5rem'
   },
   errorBox: {
-    background: '#fef2f2',
-    border: '1px solid #fca5a5',
-    color: '#dc2626',
+    background: 'rgba(239,68,68,0.15)',
+    border: '1px solid rgba(239,68,68,0.4)',
+    color: '#fca5a5',
     padding: '12px 16px',
-    borderRadius: '8px',
+    borderRadius: '10px',
     marginBottom: '1rem',
     fontSize: '14px'
   },
@@ -272,45 +281,51 @@ const styles = {
   },
   label: {
     display: 'block',
-    fontSize: '14px',
+    fontSize: '11px',
     fontWeight: '600',
-    color: '#374151',
-    marginBottom: '6px'
+    // 🎨 YAHAN CHANGE: Muted white label
+    color: 'rgba(255,255,255,0.5)',
+    marginBottom: '6px',
+    letterSpacing: '0.5px',
+    textTransform: 'uppercase'
   },
   input: {
     width: '100%',
     padding: '12px 16px',
-    border: '1.5px solid #e5e7eb',
-    borderRadius: '8px',
-    fontSize: '15px',
+    // 🎨 YAHAN CHANGE: Glass input
+    background: 'rgba(255,255,255,0.07)',
+    border: '1px solid rgba(255,255,255,0.12)',
+    borderRadius: '12px',
+    fontSize: '14px',
+    // 🎨 YAHAN CHANGE: White text inside input
+    color: '#ffffff',
     outline: 'none',
     boxSizing: 'border-box',
     fontFamily: 'inherit',
-    transition: 'border-color 0.2s'
   },
   loginBtn: {
     width: '100%',
     padding: '13px',
-    background: '#6366f1',
+    // 🎨 YAHAN CHANGE: Purple gradient button
+    background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
     color: 'white',
     border: 'none',
-    borderRadius: '8px',
-    fontSize: '16px',
+    borderRadius: '12px',
+    fontSize: '15px',
     fontWeight: '600',
     marginTop: '8px',
     marginBottom: '16px',
-    transition: 'background 0.2s'
   },
   switchText: {
     textAlign: 'center',
-    color: '#6b7280',
+    color: 'rgba(255,255,255,0.4)',
     fontSize: '14px'
   },
   link: {
-    color: '#6366f1',
+    // 🎨 YAHAN CHANGE: Light purple link
+    color: '#818cf8',
     fontWeight: '600',
     textDecoration: 'none'
   }
 }
-
 export default Login
