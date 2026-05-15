@@ -1,4 +1,4 @@
-AI Career Mentor is a full-stack AI-powered career guidance platform that helps students and professionals accelerate their career growth. It analyzes resumes, detects skill gaps, recommends jobs, generates personalized learning roadmaps, and conducts AI mock interviews.
+🚀AI Career Mentor is a full-stack AI-powered career guidance platform that helps students and 🧠professionals accelerate their career growth. It analyzes resumes, detects skill gaps, recommends jobs👨‍🎓, generates personalized learning roadmaps, and conducts AI mock interviews.
 
 Built with FastAPI, React, MongoDB, Groq LLaMA-3.3, LangChain, FAISS, and RAG System.
 
