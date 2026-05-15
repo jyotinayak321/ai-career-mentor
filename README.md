@@ -33,6 +33,9 @@ MongoDB Atlas — Database (Free tier)
 
 
 🏗️ Project Structure
+
+```bash
+
 ai-career-mentor/
 ├── backend/
 │   ├── main.py                  # FastAPI entry point
@@ -87,6 +90,7 @@ ai-career-mentor/
     │       └── Interview.jsx    # Mock interview (type/speak)
     ├── package.json
     └── vite.config.js
+```
 
 🚀 Getting Started
 Prerequisites
